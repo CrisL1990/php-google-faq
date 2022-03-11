@@ -3,9 +3,9 @@
     $domande = [
 
         [
-            'domanda' =>   "Come state implementando la recente decisione della Corte di giustizia dell'Unione europea (CGUE) relativa al diritto all'oblio?",
+            'domanda' =>   "Come state implementando la recente (CGUE) relativa al diritto all'oblio?",
 
-            'risposta' =>  "La recente decisione della Corte di giustizia dell'Unione europea ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.<br><br>
+            'risposta' =>  "La recente <a href='#'>decisione della Corte di giustizia dell'Unione europea</a> ha profonde conseguenze per i motori di ricerca in Europa. La Corte ha stabilito che alcuni utenti hanno il diritto di chiedere ai motori di ricerca come Google di rimuovere risultati relativi a chiavi di ricerca che includono il proprio nome. Per poter essere rimossi, i risultati visualizzati devono essere inadeguati, irrilevanti o non più rilevanti, o eccessivi.<br><br>
 
                             Da quando questa decisione è stata pubblicata il 13 maggio 2014, abbiamo lavorato incessantemente per uniformarci a essa. Si tratta di una procedura complessa perché dobbiamo valutare ogni singola richiesta e effettuare un bilanciamento tra il diritto dell'individuo a controllare i suoi dati personali ed il diritto di tutti di conoscere e distribuire le informazioni.<br><br>
             
@@ -62,19 +62,6 @@
 
         ]
     ];
-
-    foreach ($domande as $domanda){
-
-        foreach( $domanda as $key => $value){
-            if($key == 'domanda'){
-                echo "<h1>$value</h1>";
-            }
-            elseif($key == 'risposta'){
-                echo "<p>$value</p>";
-            }
-        }
-    }
-
 ?>
 
 
@@ -84,14 +71,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,400;1,300&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="./style.css">
     <title>Google FAQ</title>
 </head>
 <body>
 
+    <header>
+        <ul>
+            <li>
+                <a class="li-nav" href="#">Introduzione</a>
+            </li>
+            <li>
+                <a class="li-nav" href="#">Norme sulla privacy</a>
+            </li>
+            <li>
+                <a class="li-nav" href="#">Termini di servizio</a>
+            </li>
+            <li>
+                <a class="li-nav" href="#">Tecnologie</a>
+            </li>
+            <li>
+                <a class="li-nav" href="#">Domande frequenti</a>
+            </li>
+        </ul>
+    </header>
+
 
     <main>
-
+        <?php
+            foreach ($domande as $domanda){
+                foreach( $domanda as $key => $value){
+                    if($key == 'domanda'){
+                        echo "<h1>$value</h1>";
+                    }
+                    elseif($key == 'risposta'){
+                        echo "<p>$value</p>";
+                    }
+                }
+            };
+        ?>
     </main>
 
     
